@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id "bootstrap.config"
+}
+
+bootstrap {
+    android {
+        compileSdkVersion Versions.compile_sdk
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://dl.bintray.com/arrow-kt/arrow-kt/"
+            content {
+                includeGroup "io.arrow-kt"
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

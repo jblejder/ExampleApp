@@ -1,0 +1,55 @@
+apply plugin: 'bootstrap.lib'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+
+android.buildFeatures.dataBinding = true
+android.buildFeatures.viewBinding = true
+
+dependencies {
+    implementation project(':utils')
+
+    implementation AndroidX.appcompat
+    implementation AndroidX.core
+
+    implementation Deps.material
+
+    implementation AndroidX.core
+    implementation AndroidX.cardView
+    implementation AndroidX.activity
+    implementation AndroidX.fragment
+
+    implementation AndroidX.constraitLayout
+    implementation AndroidX.coordinatorLayout
+
+    implementation Deps.threeTen
+    implementation Deps.lottie
+
+    implementation Dagger.dagger
+    implementation Dagger.daggerAndroid
+    implementation Dagger.daggerSupport
+    kapt Dagger.daggerCompiler
+    kapt Dagger.daggerProcessor
+    compileOnly Dagger.assistedInject
+    kapt Dagger.assistedInjectProcessor
+
+    implementation AndroidX.navigationAll
+
+    implementation AndroidX.lifecycleExt
+    implementation AndroidX.lifecycleViewmodel
+    implementation AndroidX.lifecycleLiveData
+
+    implementation AndroidX.preference
+
+    implementation Deps.timber
+
+    implementation Deps.rx
+    implementation Deps.rxAndroid
+
+    implementation AndroidX.viewPager
+
+    implementation AndroidX.swiperefreshlayout
+    implementation AndroidX.recyclerview
+
+    implementation Deps.groupieAll
+}

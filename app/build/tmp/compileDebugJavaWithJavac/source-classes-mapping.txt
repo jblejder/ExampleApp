@@ -1,0 +1,28 @@
+com/example/app/DataBindingTriggerClass.java
+ com.example.app.DataBindingTriggerClass
+com/example/app/di/MainActivityModule_MainActivity.java
+ com.example.app.di.MainActivityModule_MainActivity
+ com.example.app.di.MainActivityModule_MainActivity$MainActivitySubcomponent
+ com.example.app.di.MainActivityModule_MainActivity$MainActivitySubcomponent$Factory
+com/example/app/App_MembersInjector.java
+ com.example.app.App_MembersInjector
+com/example/app/di/DaggerAppComponent.java
+ com.example.app.di.DaggerAppComponent
+ com.example.app.di.DaggerAppComponent$1
+ com.example.app.di.DaggerAppComponent$Factory
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
+com/example/app/BR.java
+ com.example.app.BR
+com/example/app/DataBinderMapperImpl.java
+ com.example.app.DataBinderMapperImpl
+ com.example.app.DataBinderMapperImpl$InnerBrLookup
+ com.example.app.DataBinderMapperImpl$InnerLayoutIdLookup
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+com/example/app/BuildConfig.java
+ com.example.app.BuildConfig
+com/example/ui/BR.java
+ com.example.ui.BR

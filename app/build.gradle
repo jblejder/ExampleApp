@@ -1,0 +1,76 @@
+apply plugin: 'bootstrap.app'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    defaultConfig {
+        applicationId "com.example.app"
+        versionCode 13
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding.enabled = true
+}
+
+dependencies {
+    implementation project(':ui')
+    implementation project(':utils')
+
+    implementation AndroidX.appcompat
+    implementation AndroidX.core
+    implementation AndroidX.constraitLayout
+    implementation AndroidX.lifecycleExt
+    implementation AndroidX.lifecycleViewmodel
+    implementation AndroidX.recyclerview
+    implementation AndroidX.preference
+    implementation AndroidX.workManager
+
+    implementation Deps.threeTen
+
+    implementation Deps.rx
+    implementation Deps.rxAndroid
+
+    implementation Deps.coroutineCore
+    implementation Deps.coroutineAndroid
+
+    implementation Deps.material
+
+    implementation Deps.stetho
+    implementation Deps.timber
+    implementation Deps.moshi
+
+    implementation AndroidX.navigationAll
+
+    implementation Dagger.dagger
+    implementation Dagger.daggerAndroid
+    implementation Dagger.daggerSupport
+    kapt Dagger.daggerCompiler
+    kapt Dagger.daggerProcessor
+    compileOnly Dagger.assistedInject
+    kapt Dagger.assistedInjectProcessor
+
+    implementation Deps.groupieAll
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+sourceSets {
+    all {
+        languageSettings {
+            useExperimentalAnnotation('kotlinx.coroutines.ExperimentalCoroutinesApi')
+            useExperimentalAnnotation('kotlin.RequiresOptIn')
+        }
+    }
+}

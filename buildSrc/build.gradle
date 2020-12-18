@@ -1,0 +1,42 @@
+plugins {
+    id "java-gradle-plugin"
+    id "org.jetbrains.kotlin.jvm" version "1.4.10"
+}
+
+repositories {
+    google()
+    jcenter()
+}
+
+dependencies {
+    implementation(gradleApi())
+    implementation(localGroovy())
+
+    def kotlin_version = "1.4.10"
+    def nav_version = "2.3.0"
+
+    implementation "com.android.tools.build:gradle:4.1.0"
+    implementation "com.google.gms:google-services:4.3.4"
+    implementation "com.google.firebase:firebase-crashlytics-gradle:2.3.0"
+    implementation "com.google.firebase:firebase-appdistribution-gradle:2.0.1"
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    implementation "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    implementation 'com.google.protobuf:protobuf-gradle-plugin:0.8.13'
+}
+
+gradlePlugin {
+    plugins {
+        androidConfigPlugin {
+            id = 'bootstrap.config'
+            implementationClass = 'com.jakub.BootstrapConfig'
+        }
+        applicationPlugin {
+            id = "bootstrap.app"
+            implementationClass = "com.jakub.BootstrapApp"
+        }
+        androidLibPlugin {
+            id = "bootstrap.lib"
+            implementationClass = "com.jakub.BootstrapAndroidLibrary"
+        }
+    }
+}

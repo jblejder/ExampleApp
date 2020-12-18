@@ -1,0 +1,10 @@
+apply plugin: 'bootstrap.lib'
+apply plugin: 'kotlin-android-extensions'
+
+
+dependencies {
+
+    implementation Deps.coroutineCore
+    implementation Deps.coroutineAndroid
+    implementation Deps.threeTen
+}
